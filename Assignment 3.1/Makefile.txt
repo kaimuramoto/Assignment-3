@@ -1,0 +1,15 @@
+all: PQdemo
+
+
+PQdemo: PQdemo.o 
+	g++ -Wall -o PQdemo PQdemo.o
+
+
+PQdemo.o: PQ.h AVLTree.h dsexceptions.h
+	g++ -Wall -o PQdemo.o -c PQ.h
+
+
+clean:
+	rm -f PQdemo *.o
+
+
